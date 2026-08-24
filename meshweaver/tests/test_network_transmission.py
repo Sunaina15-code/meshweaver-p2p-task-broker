@@ -1,4 +1,4 @@
-# MeshWeaver - Network Transmission Tests
+## MeshWeaver - Network Transmission Tests
 # Week 2: Test function transmission across simulated network
 
 import sys
