@@ -17,7 +17,6 @@ from serializer.ml_functions import (
     neural_network_forward
 )
 
-
 class Week2Demo:
     """Complete Week 2 demonstration of serialization across network"""
     

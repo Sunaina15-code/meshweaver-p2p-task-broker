@@ -9,7 +9,6 @@ import unittest
 import numpy as np
 from serializer.task_serializer import TaskSerializer
 
-
 class TestMLFunctions(unittest.TestCase):
     """Test serialization of ML/AI functions"""
     

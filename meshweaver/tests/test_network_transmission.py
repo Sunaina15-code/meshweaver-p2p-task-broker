@@ -11,7 +11,6 @@ import numpy as np
 from serializer.task_serializer import TaskSerializer
 from serializer.task_queue import DistributedTaskQueue
 
-
 class TestNetworkTransmission(unittest.TestCase):
     """Test transmitting serialized functions across network simulation"""
     

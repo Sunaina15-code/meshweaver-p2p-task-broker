@@ -112,7 +112,6 @@ class TestSerialization(unittest.TestCase):
         self.assertEqual(result['max'], 100)
         print(f"✅ Statistics: mean={result['mean']}, std={result['std_dev']:.2f}")
 
-
 if __name__ == '__main__':
     print("=== MeshWeaver Week 2: Serialization Tests ===\n")
     unittest.main(verbosity=2)
