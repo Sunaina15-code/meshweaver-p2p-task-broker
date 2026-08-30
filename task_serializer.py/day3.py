@@ -19,13 +19,3 @@ class TaskSerializer:
         return cloudpickle.dumps(payload)
 
 
-# Example usage
-def add(a, b):
-    return a + b
-
-
-serializer = TaskSerializer()
-
-task = serializer.serialize_task(add, args=(10, 20))
-
-print(task)
