@@ -7,7 +7,6 @@ This document contains the performance benchmarking results for the MeshWeaver P
 **Python Version:** 3.13
 **Test Environment:** Local development environment
 
----
 
 ## Benchmark Categories
 
