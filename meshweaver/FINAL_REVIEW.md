@@ -35,3 +35,5 @@
 ## Aug 28 - Performance benchmarking done
 
 ## Aug 29 - Documentation updated
+
+## Aug 30 - Code review and cleanup
