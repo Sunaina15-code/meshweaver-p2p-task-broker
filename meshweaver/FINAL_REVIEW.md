@@ -39,3 +39,5 @@
 ## Aug 30 - Code review and cleanup
 
 ## Aug 31 - Final testing all modules
+
+## Sep 1 - MeshWeaver Week 4 complete
