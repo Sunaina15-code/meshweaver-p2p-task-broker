@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import asyncio
 import numpy as np
 from serializer.task_serializer import TaskSerializer
-from serializer.task_queue import DistributedTaskQueue
+from serializer.task_queue import DistributedQueue
 from serializer.ml_functions import (
     logistic_regression_train,
     k_nearest_neighbors,
@@ -22,8 +22,8 @@ class Week2Demo:
     
     def __init__(self):
         self.serializer = TaskSerializer()
-        self.node1 = DistributedTaskQueue("ML-Node-1")
-        self.node2 = DistributedTaskQueue("Math-Node-2")
+        self.node1 = DistributedQueue("ML-Node-1")
+        self.node2 = DistributedQueue("Math-Node-2")
     
     def demo_1_basic_serialization(self):
         """Demo 1: Basic function serialization"""

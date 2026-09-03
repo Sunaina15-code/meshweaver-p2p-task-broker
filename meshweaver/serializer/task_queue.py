@@ -32,10 +32,12 @@ class DistributedQueue:
         self.queue = asyncio.PriorityQueue()
         self.completed = []
         self.failed = []
+        self.counter = 0  # Add counter for unique ordering
 
     async def submit(self, func, *args, priority=1, **kwargs):
         task = Task(func, args, kwargs, priority)
-        await self.queue.put((priority, task))
+        await self.queue.put((priority, self.counter, task))  # Add counter as tiebreaker
+        self.counter += 1  # Increment counter
         print(f"[{self.node_id}] Submitted: "
               f"{task.func_name} (ID:{task.task_id})")
         return task.task_id
@@ -43,7 +45,8 @@ class DistributedQueue:
     async def execute_next(self):
         if self.queue.empty():
             return None
-        _, task = await self.queue.get()
+            
+        _, _, task = await self.queue.get()  # Unpack three values instead of two
         task.status = Status.RUNNING
         print(f"[{self.node_id}] Running: {task.func_name}")
         try:

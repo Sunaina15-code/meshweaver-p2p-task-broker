@@ -9,7 +9,8 @@ import unittest
 import asyncio
 import numpy as np
 from serializer.task_serializer import TaskSerializer
-from serializer.task_queue import DistributedTaskQueue
+from serializer.task_queue import DistributedQueue
+
 
 class TestNetworkTransmission(unittest.TestCase):
     """Test transmitting serialized functions across network simulation"""
@@ -47,8 +48,8 @@ class TestNetworkTransmission(unittest.TestCase):
         """Test async task distribution across multiple nodes"""
         async def run_multi_node():
             # Create multiple "nodes"
-            node1 = DistributedTaskQueue("node-1")
-            node2 = DistributedTaskQueue("node-2")
+            node1 = DistributedQueue("node-1")
+            node2 = DistributedQueue("node-2")
             
             def ml_task_1(data):
                 return np.mean(data)
@@ -154,7 +155,7 @@ class TestNetworkTransmission(unittest.TestCase):
     def test_concurrent_execution(self):
         """Test executing multiple tasks concurrently"""
         async def run_concurrent():
-            queue = DistributedTaskQueue("concurrent-node")
+            queue = DistributedQueue("concurrent-node")
             
             def task_a(x): return x * 2
             def task_b(x): return x ** 2
