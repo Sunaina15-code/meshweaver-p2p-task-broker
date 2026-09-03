@@ -43,3 +43,5 @@
 ## Sep 1 - MeshWeaver Week 4 complete
 
 ## Sep 2 - Final review preparation
+
+## Sep 3 - MeshWeaver project complete and submitted
