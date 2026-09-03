@@ -28,3 +28,4 @@
 - asyncio, cloudpickle, Kademlia DHT, Rich, Click, hmac
 
 ## MeshWeaver is COMPLETE! 🎉
+## Aug 26 - Final review ready
