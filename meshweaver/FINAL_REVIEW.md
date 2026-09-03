@@ -41,3 +41,5 @@
 ## Aug 31 - Final testing all modules
 
 ## Sep 1 - MeshWeaver Week 4 complete
+
+## Sep 2 - Final review preparation
